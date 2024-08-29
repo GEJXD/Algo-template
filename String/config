@@ -1,0 +1,10 @@
+<最小表示法> <MinimalString.cpp>
+<字符串哈希> <StringHash.cpp>
+<KMP> <KMP.cpp>
+<字典树> <Trie.cpp>
+<01字典树> <01Trie.cpp>
+<AC自动机> <ACAutomaton.cpp>
+<AC自动机2> <ACAutomaton2.cpp>
+<Z-Function> <zFunction.cpp> <zFunction.tex>
+<马拉车> <Manacher.cpp>
+<后缀数组> <SuffixArray.cpp> <SuffixArray.tex>

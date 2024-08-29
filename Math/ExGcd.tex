@@ -1,0 +1,7 @@
+对于方程 $ax + by + c$, 调用$`exgcd`$, 求出 $x_0$ 和 $y_0$,
+使得 $ax_0 + by_0 = gcd(a, c)$。
+
+在 $gcd(a, b) | c$的情况下，方程有通解:
+
+$x = x_0 * \frac{c}{gcd(a, b)} + k * \frac{b}{gcd(a, b)}$ 和
+$y = y_0 * \frac{c}{gcd(a, b)} - k * \frac{a}{gcd(a, b)}$
