@@ -6,9 +6,13 @@ A latex-based algorithm templates for ICPC competitions. Only used for **Persona
 <!-- ![Code page](./resource/code-page.png) -->
 
 <div style="display: flex;">
-  <img src="./resource/menu-page.png" alt="Menu page" style="margin-right: 10px;">
-  <img src="./resource/code-page.png" alt="Code page">
+  <img src="./resource/menu-page.png" alt="Menu page" style="width: 50%; height: auto; margin-right: 10px;">
+  <img src="./resource/code-page.png" alt="Code page" style="width: 50%; height: auto;">
 </div>
+
+You can check out the demo [here](https://github.com/GEJXD/Algo-template/blob/master/resource/template.pdf).
+
+> The demo algorithm template are mostly copy from [this repo](https://www.yuque.com/capps/ze6wk1/heb78p9y3xvyrpz9?singleDoc#hJ67o), for preview and example only.
 
 ## 🪷 Features
 
@@ -115,3 +119,5 @@ Transcript written on template.log.
 ```
 
 the `template.pdf` are the result.
+
+you can run the `make clean` command to clean.
