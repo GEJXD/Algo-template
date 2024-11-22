@@ -1,42 +1,117 @@
-﻿# ICPC-Code-Template-in-Latex
+﻿# Algo-Template
 
+A latex-based algorithm templates for ICPC competitions. Only used for **Personal.**
 
-创建一个Latex版本的 ACM-ICPC 模板。
+<!-- ![Menu page](./resource/menu-page.png) -->
+<!-- ![Code page](./resource/code-page.png) -->
 
-本项目以github的[另一个项目](https://github.com/jasison27/ACM-ICPC-CodeTemplate-Late)为基础，进行了一定程度上的修改于完善：
+<div style="display: flex;">
+  <img src="./resource/menu-page.png" alt="Menu page" style="margin-right: 10px;">
+  <img src="./resource/code-page.png" alt="Code page">
+</div>
 
-- 优化了排版
-- 优化了全文的代码显示
-- 支持中文
-- 可以在每一个Subciton/Subsection/Subsubsection后插入`.tex`文件，用来对当前的模板进行说明。
-- 支持subsubsection的建立。
+## 🪷 Features
 
-## 文件结构：
+- Module independent, content configured via `config` file.
+- Chinese Support.
+- Brief PDF structure, easy to find.
 
-1. 主文件中的 `config`文件为控制一级目录的配置文件，主要用来控制Section的输出。内部填写的名字代表着一个一级目录。该项需要使用者自行进行更改。
-2. 主文件中的 `head`、`tail`、`main.cpp`文件**不建议**进行修改，直接使用即可。如果有意对生成的`tex`文件进行自定义修改，可以修改`head`以及`tail`文件。如果发现编译运行`main.cpp`文件时发生错误，可以根据`main.cpp`中的注释进行一定程度上的修改。
-3. 一级目录中的`config`文件为当前目录的配置文件，主要用来控制Subsection的输出及判定是否存在Subsubsection。该文件存在四个参数：
-<二级目录名称> <代码文件> <tex文件> <三级目录名称>
-   - <二级目录名称>：在<>内部填写当前你需要的二级目录（即Subsection）的名称
-   - <代码文件>：在<>内部填写在当前二级目录中，你所需要插入的代码(支持`.java`/`.cpp`/`.py`文件)。**如果当前状态下无需代码，则在<>中间留空（如果没有后面两个参数，则可以直接省略<>）**，
-   - <tex文件>：在<>内部填写在当前二级目录中，你所需要插入的说明文件`.tex`.**如果当前状态下无需代码，则在<>中间留空（如果没有最后一个参数，则可以直接省略<>）**
-   - <三级目录名称>：如果你需要生成一个三级目录，则你只需要在在次项中填写于<二级目录名称>相同的名称。**注意：此时填写的名字代表的是一个二级目录，（是一个文件夹），此时第二个以及第三个参数需要留空**
-4. 二级目录中的`config`文件配置跟上述相同，只需要照葫芦画瓢即可。
+## 📦 Requirements
 
-具体细节参考内容即可。
+- Tex-Live
+- g++ compiler (Theoretically any C++ compiler will work, but it's untested.)
+- make
 
-## 使用：
+## 🧭 Usage
 
-### 准备：
+### 1.Install dependences:
 
-ACM-ICPC模版库、g++环境、Latex发行版软件
+**For Arch linux:**
+```bash
+sudo pacman -S make g++
+yay -S texlive-full
+```
 
-#### Linux：
+**For Ubuntu:**
+```bash
+sudo apt-get install texlive-full
+sudo apt-get install build-essential
+```
 
-直接make就可以了（如果没有安装Latex，需要自行安装一下texlive-full）
+**For other distributions:**
 
-#### Windows：
+Refer to the documentation for each distribution.
 
-**因为需要支持中文，故需要将Windows系统编码改为utf-8！！**
+After the installation is complete, enter the following code to check if the installation was successful.
+```bash
+make --version
+g++ --version
+latex --version
+```
 
-之后编译运行`main.cpp`，之后就会生成一份`template.tex`文件，最后只需要用Latex使用`XeLatex`编译生成pdf文件即可。
+If successful, you should see output similar to the following.
+```bash
+GNU Make 4.4.1
+为 x86_64-pc-linux-gnu 编译
+Copyright (C) 1988-2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+g++ (GCC) 14.2.1 20240910
+Copyright © 2024 Free Software Foundation, Inc.
+本程序是自由软件；请参看源代码的版权声明。本软件没有任何担保；
+包括没有适销性和某一专用目的下的适用性担保。
+
+pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux)
+kpathsea version 6.4.0
+Copyright 2024 Han The Thanh (pdfTeX) et al.
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the pdfTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the pdfTeX source.
+Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
+Compiled with libpng 1.6.44; using libpng 1.6.44
+Compiled with zlib 1.3.1; using zlib 1.3.1
+Compiled with xpdf version 4.04
+```
+
+### Clone
+
+Use `git clone` to clone the project locally.
+```bash
+git clone git@github.com:GEJXD/Algo-template.git.
+cd Algo-templatee
+```
+
+### Edit your template
+
+You can change the author, title, etc. attributes of `head.tex.
+
+The `config` file in the root directory of this project is a configuration file for a first-level directory, mainly used to control the output of Section. The internal name represents a first-level directory. The name needs to be changed by the user. **Note that the subfolder name should same as the `config` file.**
+
+The config in each first-level subfolder is used to configure the output of the subsection and whether or not there is a subsubsection. Format are as follow:
+
+- <subsection name> <code file> <tex file> <subsubsection name>
+- subsection name: fill in the name of the desired Subsection inside the <>.
+- code file: The code file corresponding to the current subsection.
+- tex file: The description file corresponding to the current subsection
+- If you need a subsubsection, then you only need to fill in the subsection with the same name as <subsubsection name>. **Note that the second and third parameters need to be left blank at this point. see `Math/config` and `Math/RandomTheory/config`.** 
+- The configuration of the config file in the subsubsection is the same as above. **Note that there are no support for subsubsubsection :(.**
+
+### Comlile
+
+just run the command `make` at the root directory of the project.
+
+```bash
+make
+```
+
+after that you will see a lot of log output. If you see output similar to the following:
+```bash
+Output written on template.pdf (42 pages).
+Transcript written on template.log.
+```
+
+the `template.pdf` are the result.
