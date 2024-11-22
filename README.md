@@ -81,7 +81,7 @@ Compiled with zlib 1.3.1; using zlib 1.3.1
 Compiled with xpdf version 4.04
 ```
 
-### Clone
+### 2.Clone
 
 Use `git clone` to clone the project locally.
 ```bash
@@ -89,7 +89,7 @@ git clone git@github.com:GEJXD/Algo-template.git.
 cd Algo-templatee
 ```
 
-### Edit your template
+### 3.Edit your template
 
 You can change the author, title, etc. attributes of `head.tex`.
 
@@ -104,7 +104,7 @@ The config in each first-level subfolder is used to configure the output of the 
 - If you need a subsubsection, then you only need to fill in the subsection with the same name as <subsubsection name>. **Note that the second and third parameters need to be left blank at this point. see `Math/config` and `Math/RandomTheory/config`.** 
 - The configuration of the config file in the subsubsection is the same as above. **Note that there are no support for subsubsubsection :(.**
 
-### Compile
+### 4.Compile
 
 just run the command `make` at the root directory of the project.
 
