@@ -108,10 +108,6 @@ The config in each first-level subfolder is used to configure the output of the 
 
 just run the command `make` at the root directory of the project.
 
-```bash
-make
-```
-
 after that you will see a lot of log output. If you see output similar to the following:
 ```bash
 Output written on template.pdf (42 pages).
@@ -119,5 +115,4 @@ Transcript written on template.log.
 ```
 
 the `template.pdf` are the result.
-
 you can run the `make clean` command to clean.
