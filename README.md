@@ -91,7 +91,7 @@ cd Algo-templatee
 
 ### Edit your template
 
-You can change the author, title, etc. attributes of `head.tex.
+You can change the author, title, etc. attributes of `head.tex`.
 
 The `config` file in the root directory of this project is a configuration file for a first-level directory, mainly used to control the output of Section. The internal name represents a first-level directory. The name needs to be changed by the user. **Note that the subfolder name should same as the `config` file.**
 
@@ -104,7 +104,7 @@ The config in each first-level subfolder is used to configure the output of the 
 - If you need a subsubsection, then you only need to fill in the subsection with the same name as <subsubsection name>. **Note that the second and third parameters need to be left blank at this point. see `Math/config` and `Math/RandomTheory/config`.** 
 - The configuration of the config file in the subsubsection is the same as above. **Note that there are no support for subsubsubsection :(.**
 
-### Comlile
+### Compile
 
 just run the command `make` at the root directory of the project.
 
