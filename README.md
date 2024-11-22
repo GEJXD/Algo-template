@@ -97,7 +97,7 @@ The `config` file in the root directory of this project is a configuration file 
 
 The config in each first-level subfolder is used to configure the output of the subsection and whether or not there is a subsubsection. Format are as follow:
 
-- <subsection name> <code file> <tex file> <subsubsection name>
+- `<subsection name> <code file> <tex file> <subsubsection name>`
 - subsection name: fill in the name of the desired Subsection inside the <>.
 - code file: The code file corresponding to the current subsection.
 - tex file: The description file corresponding to the current subsection
